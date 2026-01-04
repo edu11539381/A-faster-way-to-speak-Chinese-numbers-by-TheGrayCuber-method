@@ -1,7 +1,7 @@
 let currentData = [];
 const FILES = {
-    fast: 'data/口快數A_Normal-Day_Fast.csv',
-    strict: 'data/口快數B_Strict-Way.csv'
+    fast: 'data/A_Normal-Day_Fast.csv',
+    strict: 'data/B_Strict-Way.csv'
 };
 
 // Initialize
@@ -83,4 +83,5 @@ function renderTable() {
     if (count === 0) {
         tbody.innerHTML = '<tr><td colspan="4" style="text-align:center">No results found</td></tr>';
     }
+
 }
