@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Number Optimizer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Chinese Number Syllable Optimizer</h1>
+        <p>Finding the shortest way to say numbers using math logic.</p>
+    </header>
+
+    <div class="controls">
+        <div class="toggle-group">
+            <button id="btnFast" class="active" onclick="loadMode('fast')">Mode A: Colloquial (Fast)</button>
+            <button id="btnStrict" onclick="loadMode('strict')">Mode B: Formal (Strict)</button>
+        </div>
+        
+        <div class="search-box">
+            <input type="number" id="searchInput" placeholder="Search for a number (e.g. 10000)...">
+        </div>
+
+        <div class="filters">
+            <label>
+                <input type="checkbox" id="mathOnly"> Show only Math Shortcuts
+            </label>
+        </div>
+    </div>
+
+    <div id="status">Loading data...</div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Chinese Phrase</th>
+                    <th>Syllables</th>
+                    <th>Equation / Logic</th>
+                </tr>
+            </thead>
+            <tbody id="resultsBody">
+                </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
